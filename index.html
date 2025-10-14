@@ -1,96 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
-    <meta
-      name="description"
-      content="High-performance HTML based website template."
-    />
-  </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Away From Home - Find Your Community, Find Your Home</title>
+    <meta name="description" content="The interactive housing platform that helps international students find housing in neighborhoods where their diaspora community already lives. Feel at home before you arrive.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🏠</span>
+                <span class="logo-text">Home Away From Home</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#waitlist" class="nav-link cta-nav">Join Waitlist</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-highlight">Home Away From Home</span><br>
+                    Find Your Community, Find Your Home
+                </h1>
+                <p class="hero-description">
+                    Stop feeling lost in a new country. Our interactive housing platform connects international students with neighborhoods where their diaspora community already thrives. See exactly where students from your home country live, discover local cultural spots, and settle into housing that feels like home from day one.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" id="hero-waitlist-btn">
+                        Join Our Waitlist
+                        <span class="btn-icon">→</span>
+                    </button>
+                    <button class="btn-secondary" id="learn-more-btn">
+                        See How It Works
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">15,000+</span>
+                        <span class="stat-label">Students Helped</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Countries</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Universities</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <img src="mockup1.png" alt="Home Away From Home mobile app interface showing housing search with map, filters, and listings" class="app-screenshot">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Section 1: Interactive Map -->
+    <section class="feature-section feature-left" id="features">
+        <div class="container">
+            <div class="feature-content">
+                <div class="feature-visual">
+                    <div class="feature-mockup map-feature">
+                        <div class="mockup-header">
+                            <h3>Interactive Diaspora Map</h3>
+                        </div>
+                        <div class="map-interface">
+                            <div class="map-display">
+                                <img src="map-screenshot.png" alt="Interactive Diaspora Map showing Nigeria Community with terrain features, filter panel, and community flags" class="map-screenshot">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-text">
+                    <h2 class="feature-title">See Where Your Community Lives</h2>
+                    <p class="feature-description">
+                        Stop guessing where to live. Our interactive map shows you exactly where students from your home country have already settled. See diaspora clusters, cultural hotspots, and find neighborhoods that feel familiar even in a foreign land.
+                    </p>
+                    <ul class="feature-benefits">
+                        <li>📍 Real-time diaspora community locations</li>
+                        <li>🏛️ University proximity mapping</li>
+                        <li>🌍 Cultural amenity indicators</li>
+                        <li>📊 Community size and activity levels</li>
+                    </ul>
+                    <button class="btn-outline">Explore the Map</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Section 2: Smart Budgeting -->
+    <section class="feature-section feature-right">
+        <div class="container">
+            <div class="feature-content">
+                <div class="feature-text">
+                    <h2 class="feature-title">Smart Budget Planning</h2>
+                    <p class="feature-description">
+                        Never be caught off guard by unexpected costs. Our built-in currency calculator and budget planner help you understand the true cost of living, from rent to groceries, all converted to your home currency in real-time.
+                    </p>
+                    <ul class="feature-benefits">
+                        <li>💱 Live currency exchange rates</li>
+                        <li>🏠 Complete rent and deposit calculations</li>
+                        <li>🛒 Local grocery and utility estimates</li>
+                        <li>📱 Save and track your budget preferences</li>
+                    </ul>
+                    <button class="btn-outline">Calculate Your Budget</button>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-mockup budget-feature">
+                        <div class="mockup-header">
+                            <h3>Budget Calculator</h3>
+                        </div>
+                        <div class="calculator-interface">
+                            <div class="currency-selector">
+                                <div class="from-currency">
+                                    <label>From:</label>
+                                    <select>
+                                        <option>🇳🇬 Nigerian Naira (NGN)</option>
+                                        <option>🇺🇸 US Dollar (USD)</option>
+                                    </select>
+                                </div>
+                                <div class="exchange-arrow">⇄</div>
+                                <div class="to-currency">
+                                    <label>To:</label>
+                                    <select>
+                                        <option>🇨🇦 Canadian Dollar (CAD)</option>
+                                        <option>🇺🇸 US Dollar (USD)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="budget-categories">
+                                <div class="category">
+                                    <span class="category-label">Monthly Rent</span>
+                                    <div class="amount-display">
+                                        <span class="amount">$1,200 CAD</span>
+                                        <span class="converted">₦198,000 NGN</span>
+                                    </div>
+                                </div>
+                                <div class="category">
+                                    <span class="category-label">Security Deposit</span>
+                                    <div class="amount-display">
+                                        <span class="amount">$1,200 CAD</span>
+                                        <span class="converted">₦198,000 NGN</span>
+                                    </div>
+                                </div>
+                                <div class="category">
+                                    <span class="category-label">Utilities</span>
+                                    <div class="amount-display">
+                                        <span class="amount">$150 CAD</span>
+                                        <span class="converted">₦24,750 NGN</span>
+                                    </div>
+                                </div>
+                                <div class="category">
+                                    <span class="category-label">Groceries</span>
+                                    <div class="amount-display">
+                                        <span class="amount">$300 CAD</span>
+                                        <span class="converted">₦49,500 NGN</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="total-budget">
+                                <div class="total-label">Total Monthly Cost</div>
+                                <div class="total-amount">
+                                    <span class="amount">$1,650 CAD</span>
+                                    <span class="converted">₦272,250 NGN</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Section 3: Community Network -->
+    <section class="feature-section feature-left">
+        <div class="container">
+            <div class="feature-content">
+                <div class="feature-visual">
+                    <div class="feature-mockup community-feature">
+                        <div class="mockup-header">
+                            <h3>Welcome Network</h3>
+                        </div>
+                        <div class="community-interface">
+                            <div class="community-header">
+                                <h4>Connect with Your Community</h4>
+                                <p>Join local groups before you arrive</p>
+                            </div>
+                            <div class="community-groups">
+                                <div class="group-card">
+                                    <div class="group-icon">🇳🇬</div>
+                                    <div class="group-info">
+                                        <h5>Nigerian Students Toronto</h5>
+                                        <p>1,247 members • Very Active</p>
+                                        <div class="group-tags">
+                                            <span class="tag">WhatsApp</span>
+                                            <span class="tag">Events</span>
+                                            <span class="tag">Housing</span>
+                                        </div>
+                                    </div>
+                                    <button class="join-btn">Join</button>
+                                </div>
+                                <div class="group-card">
+                                    <div class="group-icon">🎓</div>
+                                    <div class="group-info">
+                                        <h5>UofT International Students</h5>
+                                        <p>3,891 members • Active</p>
+                                        <div class="group-tags">
+                                            <span class="tag">Facebook</span>
+                                            <span class="tag">Study Groups</span>
+                                            <span class="tag">Social</span>
+                                        </div>
+                                    </div>
+                                    <button class="join-btn">Join</button>
+                                </div>
+                                <div class="group-card">
+                                    <div class="group-icon">🏠</div>
+                                    <div class="group-info">
+                                        <h5>Toronto Housing Network</h5>
+                                        <p>892 members • Active</p>
+                                        <div class="group-tags">
+                                            <span class="tag">Discord</span>
+                                            <span class="tag">Roommates</span>
+                                            <span class="tag">Tips</span>
+                                        </div>
+                                    </div>
+                                    <button class="join-btn">Join</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-text">
+                    <h2 class="feature-title">Join Your Community Before You Arrive</h2>
+                    <p class="feature-description">
+                        Don't wait until you land to start building connections. Access curated WhatsApp groups, Facebook communities, and student clubs in your chosen neighborhood. Make friends, get local tips, and arrive with a ready-made support network.
+                    </p>
+                    <ul class="feature-benefits">
+                        <li>📱 Verified WhatsApp groups by nationality</li>
+                        <li>🎓 University-specific student communities</li>
+                        <li>🏠 Housing and roommate networks</li>
+                        <li>🎉 Local events and cultural activities</li>
+                    </ul>
+                    <button class="btn-outline">Connect Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta" id="waitlist">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Find Housing, Feel at Home</h2>
+                <p class="cta-description">
+                    Settle into housing near campus where your community already lives, so you arrive prepared, welcomed, and confident from day one. Join thousands of international students who found their home away from home.
+                </p>
+                
+                <div class="waitlist-form">
+                    <div class="form-group">
+                        <input type="email" id="email-input" placeholder="Enter your email address" required>
+                        <select id="country-select" required>
+                            <option value="">Select your home country</option>
+                            <option value="NG">🇳🇬 Nigeria</option>
+                            <option value="IN">🇮🇳 India</option>
+                            <option value="CN">🇨🇳 China</option>
+                            <option value="BR">🇧🇷 Brazil</option>
+                            <option value="MX">🇲🇽 Mexico</option>
+                            <option value="PK">🇵🇰 Pakistan</option>
+                            <option value="BD">🇧🇩 Bangladesh</option>
+                            <option value="VN">🇻🇳 Vietnam</option>
+                            <option value="TR">🇹🇷 Turkey</option>
+                            <option value="EG">🇪🇬 Egypt</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <button class="btn-primary btn-large" id="final-waitlist-btn">
+                            Join Our Waitlist
+                            <span class="btn-icon">→</span>
+                        </button>
+                    </div>
+                    <p class="form-note">Be the first to know when we launch. No spam, just updates.</p>
+                </div>
+
+                <div class="trust-elements">
+                    <div class="testimonials">
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                "Finally found a place where I could speak my language and feel at home. The community connections made all the difference."
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">👩🏾</div>
+                                <div class="author-info">
+                                    <div class="author-name">Aisha O.</div>
+                                    <div class="author-location">🇳🇬 → 🇨🇦</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                "The budget calculator saved me from financial surprises. I knew exactly what to expect before arriving."
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">👨🏽</div>
+                                <div class="author-info">
+                                    <div class="author-name">Raj K.</div>
+                                    <div class="author-location">🇮🇳 → 🇺🇸</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-proof">
+                        <div class="rating">
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <div class="rating-text">4.9/5 from 2,847 students</div>
+                        </div>
+                        <div class="user-count">
+                            <div class="count-number">15,000+</div>
+                            <div class="count-label">students already on waitlist</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">🏠</span>
+                    <span class="logo-text">Home Away From Home</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#features">Features</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#waitlist">Waitlist</a>
+                    <a href="mailto:hello@homeawayfromhome.app">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Home Away From Home. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
