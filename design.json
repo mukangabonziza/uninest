@@ -1,0 +1,592 @@
+{
+    "designSystem": {
+      "name": "CoverMyMeds Careers Design System",
+      "version": "1.0.0",
+      "description": "Comprehensive design system extracted from CoverMyMeds careers website"
+    },
+    
+    "colorPalette": {
+      "primary": {
+        "magenta": {
+          "main": "#E6007E",
+          "description": "Primary brand color used for CTAs and accent elements",
+          "usage": ["primary buttons", "links", "decorative circles", "accent text"]
+        },
+        "darkBlue": {
+          "main": "#003D5C",
+          "description": "Primary text and heading color",
+          "usage": ["headings", "body text", "logo text", "navigation"]
+        },
+        "teal": {
+          "main": "#00A7A0",
+          "description": "Secondary brand color for icons and accents",
+          "usage": ["icon fills", "decorative elements"]
+        },
+        "orange": {
+          "main": "#FF8833",
+          "gradient": "#FF6600",
+          "description": "Accent color for decorative elements and gradients",
+          "usage": ["brushstroke graphics", "decorative circles", "gradient accents"]
+        }
+      },
+      "neutral": {
+        "white": "#FFFFFF",
+        "offWhite": "#FFF5F5",
+        "lightPink": "#FFE8F0",
+        "lightBlue": "#E8F4F8",
+        "gray": {
+          "50": "#F8F9FA",
+          "100": "#F1F3F5",
+          "200": "#E9ECEF",
+          "300": "#DEE2E6",
+          "400": "#CED4DA",
+          "500": "#ADB5BD",
+          "600": "#6C757D",
+          "700": "#495057",
+          "800": "#343A40",
+          "900": "#212529"
+        }
+      },
+      "backgrounds": {
+        "primary": "#FFFFFF",
+        "secondary": "#FFF5F5",
+        "lightPink": "#FFE8F0",
+        "lightBlue": "#E8F4F8",
+        "offWhite": "#FAF8F6"
+      }
+    },
+  
+    "typography": {
+      "fontFamilies": {
+        "primary": {
+          "name": "Serif (appears to be a modern serif like Freight Text or similar)",
+          "usage": ["headings", "display text"],
+          "fallback": "Georgia, Times New Roman, serif"
+        },
+        "secondary": {
+          "name": "Sans-serif (appears to be a geometric sans like Avenir or similar)",
+          "usage": ["body text", "navigation", "buttons", "ui elements"],
+          "fallback": "system-ui, -apple-system, sans-serif"
+        }
+      },
+      "typeScale": {
+        "hero": {
+          "fontSize": "72px",
+          "lineHeight": "1.1",
+          "fontWeight": "700",
+          "letterSpacing": "-0.02em",
+          "fontFamily": "primary",
+          "usage": ["main hero headlines like 'You've never worked'"]
+        },
+        "h1": {
+          "fontSize": "56px",
+          "lineHeight": "1.2",
+          "fontWeight": "700",
+          "letterSpacing": "-0.01em",
+          "fontFamily": "primary",
+          "usage": ["page titles like 'Careers', section headers"]
+        },
+        "h2": {
+          "fontSize": "40px",
+          "lineHeight": "1.3",
+          "fontWeight": "700",
+          "letterSpacing": "0",
+          "fontFamily": "primary",
+          "usage": ["major section headings like 'A culture rooted in care'"]
+        },
+        "h3": {
+          "fontSize": "32px",
+          "lineHeight": "1.4",
+          "fontWeight": "700",
+          "letterSpacing": "0",
+          "fontFamily": "primary",
+          "usage": ["subsection titles like 'Winning Together', 'Recognition'"]
+        },
+        "h4": {
+          "fontSize": "24px",
+          "lineHeight": "1.4",
+          "fontWeight": "700",
+          "letterSpacing": "0",
+          "fontFamily": "primary",
+          "usage": ["card titles like 'Benefits', 'Community Impact'"]
+        },
+        "body": {
+          "fontSize": "18px",
+          "lineHeight": "1.6",
+          "fontWeight": "400",
+          "letterSpacing": "0",
+          "fontFamily": "secondary",
+          "usage": ["main body text throughout"]
+        },
+        "bodySmall": {
+          "fontSize": "16px",
+          "lineHeight": "1.6",
+          "fontWeight": "400",
+          "letterSpacing": "0",
+          "fontFamily": "secondary",
+          "usage": ["supporting text"]
+        },
+        "navigation": {
+          "fontSize": "16px",
+          "lineHeight": "1.5",
+          "fontWeight": "600",
+          "letterSpacing": "0",
+          "fontFamily": "secondary",
+          "usage": ["navigation menu items"]
+        },
+        "button": {
+          "fontSize": "16px",
+          "lineHeight": "1",
+          "fontWeight": "700",
+          "letterSpacing": "0.05em",
+          "textTransform": "uppercase",
+          "fontFamily": "secondary",
+          "usage": ["all buttons and CTAs"]
+        },
+        "overline": {
+          "fontSize": "14px",
+          "lineHeight": "1.2",
+          "fontWeight": "700",
+          "letterSpacing": "0.1em",
+          "textTransform": "uppercase",
+          "fontFamily": "secondary",
+          "usage": ["section labels like 'JOIN OUR TEAM'"]
+        }
+      }
+    },
+  
+    "spacing": {
+      "scale": {
+        "xs": "8px",
+        "sm": "16px",
+        "md": "24px",
+        "lg": "32px",
+        "xl": "48px",
+        "2xl": "64px",
+        "3xl": "96px",
+        "4xl": "128px"
+      },
+      "sections": {
+        "paddingTop": "96px",
+        "paddingBottom": "96px",
+        "description": "Vertical spacing for major page sections"
+      },
+      "containers": {
+        "maxWidth": "1280px",
+        "padding": "0 48px",
+        "description": "Main content container constraints"
+      }
+    },
+  
+    "components": {
+      "buttons": {
+        "primary": {
+          "background": "#E6007E",
+          "backgroundHover": "#C4006A",
+          "text": "#FFFFFF",
+          "textHover": "#FFFFFF",
+          "border": "none",
+          "borderRadius": "50px",
+          "padding": "16px 32px",
+          "fontSize": "16px",
+          "fontWeight": "700",
+          "letterSpacing": "0.05em",
+          "textTransform": "uppercase",
+          "transition": "all 0.3s ease",
+          "shadow": "none",
+          "shadowHover": "0 4px 12px rgba(230, 0, 126, 0.3)",
+          "usage": ["primary CTAs like 'APPLY TODAY', 'OPEN POSITIONS', 'CONTACT SALES'"],
+          "states": {
+            "default": {
+              "background": "#E6007E",
+              "transform": "scale(1)"
+            },
+            "hover": {
+              "background": "#C4006A",
+              "transform": "scale(1.02)",
+              "shadow": "0 4px 12px rgba(230, 0, 126, 0.3)"
+            },
+            "active": {
+              "background": "#A5005A",
+              "transform": "scale(0.98)"
+            },
+            "disabled": {
+              "background": "#CED4DA",
+              "color": "#6C757D",
+              "cursor": "not-allowed"
+            }
+          }
+        },
+        "secondary": {
+          "background": "transparent",
+          "backgroundHover": "rgba(230, 0, 126, 0.1)",
+          "text": "#E6007E",
+          "textHover": "#C4006A",
+          "border": "2px solid #E6007E",
+          "borderHover": "2px solid #C4006A",
+          "borderRadius": "50px",
+          "padding": "14px 30px",
+          "fontSize": "16px",
+          "fontWeight": "700",
+          "letterSpacing": "0.05em",
+          "textTransform": "uppercase",
+          "transition": "all 0.3s ease"
+        },
+        "text": {
+          "background": "transparent",
+          "backgroundHover": "transparent",
+          "text": "#E6007E",
+          "textHover": "#C4006A",
+          "border": "none",
+          "padding": "8px 0",
+          "fontSize": "16px",
+          "fontWeight": "700",
+          "letterSpacing": "0.05em",
+          "textTransform": "uppercase",
+          "textDecoration": "none",
+          "textDecorationHover": "underline",
+          "usage": ["inline text links"]
+        }
+      },
+  
+      "navigation": {
+        "header": {
+          "background": "#FFFFFF",
+          "borderBottom": "1px solid #E9ECEF",
+          "height": "80px",
+          "padding": "0 48px",
+          "position": "fixed",
+          "top": 0,
+          "zIndex": 1000,
+          "shadow": "0 2px 8px rgba(0, 0, 0, 0.05)"
+        },
+        "logo": {
+          "height": "40px",
+          "primaryColor": "#003D5C",
+          "accentColor": "#E6007E"
+        },
+        "menuItems": {
+          "text": "#003D5C",
+          "textHover": "#E6007E",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "padding": "8px 16px",
+          "transition": "color 0.3s ease"
+        },
+        "dropdown": {
+          "background": "#FFFFFF",
+          "border": "1px solid #E9ECEF",
+          "borderRadius": "8px",
+          "shadow": "0 8px 24px rgba(0, 0, 0, 0.12)",
+          "padding": "8px 0"
+        }
+      },
+  
+      "cards": {
+        "standard": {
+          "background": "#FFFFFF",
+          "border": "none",
+          "borderRadius": "16px",
+          "shadow": "0 4px 16px rgba(0, 0, 0, 0.08)",
+          "shadowHover": "0 8px 24px rgba(0, 0, 0, 0.12)",
+          "padding": "32px",
+          "transition": "all 0.3s ease",
+          "usage": ["content cards like 'Benefits', 'Employee Resource Groups'"],
+          "states": {
+            "default": {
+              "transform": "translateY(0)",
+              "shadow": "0 4px 16px rgba(0, 0, 0, 0.08)"
+            },
+            "hover": {
+              "transform": "translateY(-4px)",
+              "shadow": "0 8px 24px rgba(0, 0, 0, 0.12)"
+            }
+          }
+        },
+        "image": {
+          "borderRadius": "12px",
+          "overflow": "hidden",
+          "aspectRatio": "16/9",
+          "objectFit": "cover"
+        },
+        "title": {
+          "color": "#003D5C",
+          "fontSize": "24px",
+          "fontWeight": "700",
+          "marginBottom": "16px",
+          "fontFamily": "primary"
+        },
+        "description": {
+          "color": "#495057",
+          "fontSize": "18px",
+          "lineHeight": "1.6",
+          "fontFamily": "secondary"
+        }
+      },
+  
+      "decorativeElements": {
+        "circularFrames": {
+          "description": "Multi-colored circular borders around images",
+          "border": {
+            "width": "6px",
+            "style": "solid",
+            "colors": ["#E6007E", "#00A7A0", "#003D5C", "#FF8833"],
+            "pattern": "gradient or segmented circles"
+          },
+          "innerCircle": {
+            "background": "#FFFFFF",
+            "padding": "8px"
+          },
+          "outerGap": "12px",
+          "usage": ["team member photos", "decorative image framing"],
+          "sizes": {
+            "small": "200px",
+            "medium": "300px",
+            "large": "400px"
+          }
+        },
+        "brushstrokes": {
+          "description": "Organic painted brush stroke graphics",
+          "colors": ["#FF8833", "#FF6600"],
+          "opacity": "0.9",
+          "style": "hand-painted, organic shape",
+          "placement": "background decoration, corners",
+          "usage": ["hero sections", "decorative accents"]
+        },
+        "iconContainers": {
+          "background": "#FFFFFF",
+          "border": "none",
+          "borderRadius": "50%",
+          "size": "80px",
+          "shadow": "0 4px 16px rgba(0, 0, 0, 0.08)",
+          "iconColor": "#E6007E",
+          "iconSize": "40px",
+          "usage": ["value icons like handshake icon"]
+        }
+      },
+  
+      "sections": {
+        "hero": {
+          "background": "#FFF5F5",
+          "padding": "128px 48px 96px",
+          "minHeight": "600px",
+          "textAlign": "center",
+          "decorativeElements": ["brushstroke graphics in corners"]
+        },
+        "content": {
+          "background": "#FFFFFF",
+          "padding": "96px 48px"
+        },
+        "alternating": {
+          "odd": {
+            "background": "#FFFFFF"
+          },
+          "even": {
+            "background": "#FAF8F6"
+          }
+        },
+        "callToAction": {
+          "background": "#FFE8F0",
+          "padding": "96px 48px",
+          "textAlign": "left"
+        }
+      },
+  
+      "lists": {
+        "vertical": {
+          "itemSpacing": "0",
+          "borderBottom": "1px solid #DEE2E6",
+          "padding": "24px 0"
+        },
+        "valuesList": {
+          "background": "#E8F4F8",
+          "borderRadius": "12px",
+          "padding": "32px",
+          "itemPadding": "16px 0",
+          "itemBorder": "1px solid rgba(0, 61, 92, 0.1)",
+          "textColor": "#003D5C",
+          "fontSize": "20px",
+          "fontWeight": "700"
+        }
+      },
+  
+      "chatWidget": {
+        "background": "#003D5C",
+        "text": "#FFFFFF",
+        "borderRadius": "50px",
+        "padding": "16px 24px",
+        "position": "fixed",
+        "bottom": "24px",
+        "right": "24px",
+        "shadow": "0 4px 16px rgba(0, 61, 92, 0.3)",
+        "icon": {
+          "color": "#FFFFFF",
+          "size": "20px"
+        },
+        "hover": {
+          "background": "#00557F",
+          "shadow": "0 6px 20px rgba(0, 61, 92, 0.4)"
+        }
+      },
+  
+      "breadcrumbs": {
+        "text": "#E6007E",
+        "textHover": "#C4006A",
+        "separator": "/",
+        "separatorColor": "#ADB5BD",
+        "fontSize": "14px",
+        "spacing": "8px"
+      }
+    },
+  
+    "layout": {
+      "grid": {
+        "columns": 12,
+        "gap": "32px",
+        "breakpoints": {
+          "mobile": "320px",
+          "tablet": "768px",
+          "desktop": "1024px",
+          "wide": "1280px"
+        }
+      },
+      "twoColumn": {
+        "desktop": {
+          "left": "50%",
+          "right": "50%",
+          "gap": "64px"
+        },
+        "mobile": {
+          "stack": true,
+          "gap": "32px"
+        }
+      },
+      "threeColumn": {
+        "desktop": {
+          "columns": "1fr 1fr 1fr",
+          "gap": "32px"
+        },
+        "tablet": {
+          "columns": "1fr",
+          "gap": "32px"
+        }
+      }
+    },
+  
+    "effects": {
+      "shadows": {
+        "sm": "0 2px 4px rgba(0, 0, 0, 0.06)",
+        "md": "0 4px 16px rgba(0, 0, 0, 0.08)",
+        "lg": "0 8px 24px rgba(0, 0, 0, 0.12)",
+        "xl": "0 12px 32px rgba(0, 0, 0, 0.16)"
+      },
+      "borderRadius": {
+        "sm": "8px",
+        "md": "12px",
+        "lg": "16px",
+        "xl": "24px",
+        "full": "9999px"
+      },
+      "transitions": {
+        "fast": "0.15s ease",
+        "base": "0.3s ease",
+        "slow": "0.5s ease"
+      },
+      "animations": {
+        "hover": {
+          "scale": "1.02",
+          "translateY": "-4px",
+          "duration": "0.3s"
+        },
+        "fadeIn": {
+          "from": "opacity: 0",
+          "to": "opacity: 1",
+          "duration": "0.5s"
+        }
+      }
+    },
+  
+    "images": {
+      "teamPhotos": {
+        "borderRadius": "50%",
+        "aspectRatio": "1/1",
+        "objectFit": "cover",
+        "border": "6px solid transparent",
+        "borderImage": "linear-gradient(45deg, #E6007E, #00A7A0, #FF8833)",
+        "borderImageSlice": 1
+      },
+      "contentImages": {
+        "borderRadius": "12px",
+        "aspectRatio": "16/9",
+        "objectFit": "cover"
+      }
+    },
+  
+    "doNotRules": {
+      "colors": [
+        "DO NOT apply card gradient backgrounds to icon elements - icons use solid colors",
+        "DO NOT use magenta (#E6007E) for body text - only for CTAs, links, and accents",
+        "DO NOT apply decorative brushstroke gradients to UI elements - only for background decoration",
+        "DO NOT use dark blue (#003D5C) for button backgrounds - use magenta (#E6007E)",
+        "DO NOT mix border styles on circular image frames - use consistent multi-color borders"
+      ],
+      "typography": [
+        "DO NOT use serif font for navigation or UI elements - only for headings",
+        "DO NOT use all caps for body text - only for buttons and overline labels",
+        "DO NOT reduce line-height below 1.4 for body text - readability requirement"
+      ],
+      "spacing": [
+        "DO NOT reduce section padding below 96px - maintain visual breathing room",
+        "DO NOT stack cards without gap spacing - minimum 32px between cards",
+        "DO NOT center-align body text in content sections - left-align for readability"
+      ],
+      "components": [
+        "DO NOT apply shadows to inline text elements - only to cards and elevated components",
+        "DO NOT use square corners on buttons - always use rounded (50px border-radius)",
+        "DO NOT apply hover effects to static decorative elements",
+        "DO NOT use gradients on button backgrounds - use solid colors with shadow on hover"
+      ],
+      "effects": [
+        "DO NOT apply transform animations to text content - only to interactive elements",
+        "DO NOT use transitions shorter than 0.15s - maintain smooth interactions",
+        "DO NOT stack multiple shadows on single elements - use appropriate shadow scale"
+      ]
+    },
+  
+    "accessibilityRequirements": {
+      "colorContrast": {
+        "textOnWhite": "minimum 4.5:1 ratio",
+        "textOnColor": "minimum 4.5:1 ratio",
+        "largeText": "minimum 3:1 ratio"
+      },
+      "focusStates": {
+        "outline": "2px solid #E6007E",
+        "outlineOffset": "2px",
+        "required": "all interactive elements"
+      },
+      "touchTargets": {
+        "minimum": "44px x 44px",
+        "applies": "all buttons and interactive elements"
+      }
+    },
+  
+    "implementationNotes": {
+      "priorities": [
+        "Maintain consistent use of magenta (#E6007E) for all primary CTAs and interactive elements",
+        "Use serif font exclusively for headings, sans-serif for all UI and body text",
+        "Apply circular multi-colored borders only to photo elements, not UI components",
+        "Keep decorative brushstrokes as background elements, never on interactive components",
+        "Ensure all buttons use 50px border-radius for pill-shaped appearance",
+        "Maintain generous whitespace with 96px section padding",
+        "Use shadow elevation to indicate interactivity and hierarchy",
+        "Apply subtle hover states with transform and shadow changes"
+      ],
+      "commonMistakes": [
+        "Applying decorative gradients to buttons instead of solid colors",
+        "Using center alignment for body text in content sections",
+        "Reducing border-radius on buttons below 50px",
+        "Mixing serif and sans-serif fonts in UI elements",
+        "Applying card shadows to non-interactive elements"
+      ]
+    }
+  }
