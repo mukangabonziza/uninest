@@ -31,69 +31,46 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Waitlist form functionality
+    const TYPEFORM_URL = 'https://form.typeform.com/to/sXvnN0Uj';
+    let typeformPopup = null;
+
     function initWaitlistForms() {
         const waitlistButtons = document.querySelectorAll('#hero-waitlist-btn, #final-waitlist-btn');
-        const finalWaitlistBtn = document.getElementById('final-waitlist-btn');
-        const heroWaitlistBtn = document.getElementById('hero-waitlist-btn');
-        
+        if (!waitlistButtons.length) {
+            return;
+        }
+
+        const emailInput = document.getElementById('email-input');
+        const countrySelect = document.getElementById('country-select');
+        const userTypeSelect = document.getElementById('user-type-select');
+
         waitlistButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                if (this === heroWaitlistBtn) {
-                    // Scroll to final CTA section
-                    document.getElementById('waitlist').scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                } else if (this === finalWaitlistBtn) {
-                    // Handle form submission
-                    handleWaitlistSubmission();
-                }
+            button.addEventListener('click', event => {
+                event.preventDefault();
+                openTypeformPopup();
+
+                [emailInput, countrySelect, userTypeSelect].forEach(element => {
+                    if (element) {
+                        element.value = '';
+                    }
+                });
             });
         });
-        
-        // Handle waitlist form submission
-        function handleWaitlistSubmission() {
-            const emailInput = document.getElementById('email-input');
-            const countrySelect = document.getElementById('country-select');
-            const submitBtn = document.getElementById('final-waitlist-btn');
-            
-            const email = emailInput.value.trim();
-            const country = countrySelect.value;
-            
-            // Basic validation
-            if (!email || !isValidEmail(email)) {
-                showNotification('Please enter a valid email address', 'error');
-                emailInput.focus();
-                return;
+    }
+
+    function openTypeformPopup() {
+        if (window.typeformEmbed && typeof window.typeformEmbed.makePopup === 'function') {
+            if (!typeformPopup) {
+                typeformPopup = window.typeformEmbed.makePopup(TYPEFORM_URL, {
+                    mode: 'popup',
+                    autoClose: 3,
+                    hideHeaders: true,
+                    hideFooter: true
+                });
             }
-            
-            if (!country) {
-                showNotification('Please select your home country', 'error');
-                countrySelect.focus();
-                return;
-            }
-            
-            // Show loading state
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = 'Joining Waitlist...';
-            submitBtn.disabled = true;
-            
-            // Simulate API call
-            setTimeout(() => {
-                showNotification('🎉 Welcome to the waitlist! We\'ll notify you when we launch.', 'success');
-                emailInput.value = '';
-                countrySelect.value = '';
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-                
-                // Track conversion
-                trackWaitlistSignup(email, country);
-            }, 2000);
-        }
-        
-        function isValidEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
+            typeformPopup.open();
+        } else {
+            window.open(TYPEFORM_URL, '_blank');
         }
     }
     
@@ -555,17 +532,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }, 300);
         }, 5000);
-    }
-    
-    function trackWaitlistSignup(email, country) {
-        // In a real application, this would send data to analytics
-        console.log('Waitlist signup:', { email, country, timestamp: new Date() });
-        
-        // You could integrate with services like:
-        // - Google Analytics
-        // - Mixpanel
-        // - Segment
-        // - Custom analytics endpoint
     }
     
     // Parallax effect for hero section
